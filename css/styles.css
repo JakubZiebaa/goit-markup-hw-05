@@ -484,31 +484,17 @@ margin: auto;
 
 /*  Portfolio style   */
 
-.list{
+.list {
   list-style: none;
-  display:flex;
+  display: flex;
   justify-content: center;
-  padding-top: 100px;
-  
-}
-
-.list-item{
-  margin-right: 12px;
-  
-
-}  
-
-.list-textbox{
-  padding: 20px 24px;
 }
 
 .list-button {
   cursor: pointer;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.625; 
+  line-height: 1.625; /*26px*/
   text-align: center;
   letter-spacing: 0.03em;
   border: none;
@@ -516,7 +502,8 @@ margin: auto;
   border-radius: 4px;
   padding: 6px 22px;
 }
-.filters__item:not(:last-child) {
+
+.list-item:not(:last-child) {
   margin-right: 12px;
 }
 
@@ -524,7 +511,6 @@ margin: auto;
 .list-button:hover,
 .list-button:focus {
   color: #ffffff;
-  background-color: #2196f3;
   background-color: var(--active-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -539,8 +525,6 @@ margin: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding-bottom: 94px;
-  cursor: pointer;
 }
 
 .list-images {
@@ -550,29 +534,13 @@ margin: auto;
   margin-block-start: 0;
 }
 
-.list-images:hover,
-.list-images:active,
-.list-images:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);}
-
-.list-images-name {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2; 
-  letter-spacing: 0.06em;
-  padding-bottom: 4px;
-  display: flex;
+.portfolio-images {
+  /* To add an averlay to each project in portfolio, its position has to be relative (other than static) */
+  position: relative;
+  /* To visually hide .project__overlay when it is outside the project box the overflow attribute has to get hidden value*/
+  overflow: hidden;
 }
 
-.list-images-text {
-  color: var(--secondary-color);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.875; 
-  letter-spacing: 0.03em;
-  
-}
 .list-overlay {
   position: absolute;
   top: 0;
@@ -596,4 +564,33 @@ margin: auto;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.list-images:hover,
+.list-images:active,
+.list-images:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-textbox {
+  padding: 20px 24px;
+  z-index: 2;
+}
+
+.list-images-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2; /*36px*/
+  letter-spacing: 0.06em;
+  padding-bottom: 4px;
+}
+
+.list-images-text {
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875; /*30px*/
+  letter-spacing: 0.03em;
 }
