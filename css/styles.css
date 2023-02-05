@@ -74,7 +74,6 @@ body {
   .navi-link {
     text-decoration: none;
     color: inherit;
-    /* padding: 32px 0; */
   }
   
   .navi-part {
@@ -90,9 +89,6 @@ body {
     position: relative;
     top: 31px;
   }
-  
-  /* shortened form: 
-  transition: [property] [duration] [timing-function] [delay] */
   
   .navi-part:hover,
   .navi-part:focus,
@@ -271,6 +267,25 @@ margin: auto;
   display: flex;
   justify-content: space-between;
   padding-bottom: 94px;
+}
+.gallery-part{
+  position: relative;
+  overflow: hidden;
+}
+.gallery-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 27px 90px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 .team{
   list-style: none;
